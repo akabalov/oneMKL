@@ -23,14 +23,13 @@
 #else
 #include <CL/sycl.hpp>
 #endif
-#if __has_include(<sycl/backend/cuda.hpp>)
-#include <sycl/backend/cuda.hpp>
-#include <sycl/context.hpp>
-#include <sycl/detail/pi.hpp>
-#else
+#if __has_include(<CL/sycl/backend/cuda.hpp>)
 #include <CL/sycl/backend/cuda.hpp>
 #include <CL/sycl/context.hpp>
 #include <CL/sycl/detail/pi.hpp>
+#else
+#include <sycl/context.hpp>
+#include <sycl/detail/pi.hpp>
 #endif
 #include <atomic>
 #include <memory>
