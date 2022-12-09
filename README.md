@@ -40,7 +40,7 @@ oneMKL is part of [oneAPI](https://oneapi.io).
             <td align="center">NVIDIA GPU</td>
         </tr>
         <tr>
-            <td align="center"><a href="https://ww.netlib.org"> NETLIB LAPACK</a> for x86 CPU </td>
+            <td align="center"><a href="https://www.netlib.org"> NETLIB LAPACK</a> for x86 CPU </td>
             <td align="center">x86 CPU</td>
         </tr>
         <tr>
@@ -285,28 +285,33 @@ Supported domains: BLAS, LAPACK, RNG
     - Intel(R) Core(TM) Processor Family
     - Intel(R) Xeon(R) Processor Family
 - Accelerators
-    - Intel(R) Processor Graphics GEN9
     - NVIDIA(R) TITAN RTX(TM) (Linux* only. cuRAND backend tested also with Quadro and A100 GPUs. Not tested with other NVIDIA GPU families and products.)
     - AMD(R) GPUs see [here](https://github.com/RadeonOpenCompute/ROCm#hardware-and-software-support) tested on AMD Vega 20 (gfx906)
+    - For Intel oneMKL backend:
+        - Intel Processor Graphics based on Gen9, Gen9.5 and Gen11, and Gen12 architectures
+        - Intel Iris(R) Xe graphics (formerly DG1)
+        - Intel Arc(TM) graphics (formerly Alchemist and DG2)
+        - Intel Data Center GPU Flex Series (formerly Arctic Sound-M)
+        - Intel Data Center GPU Max Series (formerly Ponte Vecchio)
+    - Intel Processor Graphics based on Gen9 is validated configuration.
     
 ---
-### Supported Operating Systems
+### Validated Operating Systems
 
 #### Linux*
 
 Operating System | CPU Host/Target | Integrated Graphics from Intel (Intel GPU) |  NVIDIA GPU
 :--- | :--- | :--- | :---
-Ubuntu                            | 18.04.3, 19.04 | 18.04.3, 19.10  | 18.04.3, 20.04
-SUSE Linux Enterprise Server*     | 15             | *Not supported* | *Not supported*
+Ubuntu                            | 20.04          | 20.04           | 20.04
 Red Hat Enterprise Linux* (RHEL*) | 8              | *Not supported* | *Not supported*
-Linux* kernel                     | *N/A*          | 4.11 or higher | *N/A*
+Linux* kernel                     | *N/A*          | 4.11 or higher  | *N/A*
 
 #### Windows*
 
 Operating System | CPU Host/Target | Integrated Graphics from Intel (Intel GPU)
 :--- | :--- | :---
 Microsoft Windows* | 10 (64-bit version only) | 10 (64-bit version only)
-Microsoft Windows* Server | 2016, 2019 | *Not supported*
+Microsoft Windows* Server | 2019 | *Not supported*
 ---
 
 ### Software Requirements
@@ -404,7 +409,7 @@ Microsoft Windows* Server | 2016, 2019 | *Not supported*
 **If the Software Package is installed through a silent install, your download and use of the
 Software Package indicates your acceptance of the Agreements.**
 
-#### Product and Version Information:
+#### Product and Version Information - Validated Configurations:
 
 Product | Supported Version | Installed by Conan | Conan Package Source | Package Install Location on Linux* | License
 :--- | :--- | :--- | :--- | :--- | :---
